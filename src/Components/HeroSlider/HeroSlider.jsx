@@ -5,17 +5,18 @@ import pet3 from '../../assets/pet-3.jpg'
 import pet4 from '../../assets/pet-4.jpg'
 import pet5 from '../../assets/pet-5.jpg'
 import bgimg from '../../assets/hero-bg.jpg'
+import { Link } from 'react-router';
 const HeroSlider = () => {
     return (
 
       <div style={{ backgroundImage: `url(${bgimg})` }} className='bg-cover bg-center bg-no-repeat  px-4 h-auto sm:h-auto md:h-[500px] lg:h-[650px]   flex md:flex-row flex-col justify-center items-start gap-10   ' >
          <div className='flex-1 md:mt-20 mt-10 w'>  
           <h3 className='text-xl font-semibold text-orange-500'>WELCOME TO PET FROSTY</h3>
-          <h1 className='text-5xl font-bold mt-5'>The Best Care for Your Best Friend</h1>
-          <p className='text-base text-gray-500 mt-5 font-semibold'>At Pet Frosty, we provide exceptional care and services for your pets, including <br /> grooming, boarding, and walking. Trust us to ensure your furry friends are <br /> happy.</p>
-           <button className="text-base font-bold text-white rounded-2xl px-4 py-2 mt-3 bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:scale-105  transition-all">
+          <h1 className='text-5xl font-bold mt-5 '>The Best Care for Your Best Friend</h1>
+          <p className='text-base text-gray-500 mt-5 font-semibold mb-5'>At Pet Frosty, we provide exceptional care and services for your pets, including <br /> grooming, boarding, and walking. Trust us to ensure your furry friends are <br /> happy.</p>
+           <Link to='/service' className="text-base  font-bold text-white rounded-2xl px-4 py-2 bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:scale-105  transition-all">
          Our Services
-        </button>
+        </Link>
 
 
          </div>

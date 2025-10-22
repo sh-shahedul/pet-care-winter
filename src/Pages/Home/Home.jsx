@@ -5,6 +5,8 @@ import Cards from '../../Components/Cards/Cards';
 import ServiceSection from '../../Components/ServiceSection/Servicesection';
 import WinterTips from '../../Components/Tips/WinterTips ';
 import ExpertVets from '../../Components/ExpertVets/ExpertVets ';
+import HomeLayOut from '../../LayOuts/HomeLayOut';
+import Adopt from '../../Components/Adopt/Adopt';
     
 const Home = () => {
     const data= useLoaderData()
@@ -31,6 +33,7 @@ const Home = () => {
 
             </main>
             <ExpertVets></ExpertVets>
+            <Adopt></Adopt>
               
         </div>
     );
