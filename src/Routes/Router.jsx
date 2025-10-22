@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import Footer from "../Components/Footer/Footer";
 import Services from "../Pages/Services/Services";
 import Profile from "../Pages/Profile/Profile";
+import ServiceDetails from "../Components/ServiceDetails/ServiceDetails";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
             path:'service',
             element:<Services></Services>
 
+        },{
+            path:'/service-details/:id',
+            element:<ServiceDetails></ServiceDetails>,
+            loader:()=>fetch('/serviceData.json')
         },
         {
             path:'profile',

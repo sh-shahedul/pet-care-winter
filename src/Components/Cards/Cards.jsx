@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'animate.css';
+import { Link } from 'react-router';
 
 const Card = ({ petcare }) => {
   useEffect(() => {
@@ -26,9 +27,9 @@ const Card = ({ petcare }) => {
         </h2>
         <p className="text-sm text-gray-500">⭐ Rating: {petcare.rating}</p>
         <p className="text-lg font-semibold text-blue-600">${petcare.price}</p>
-        <button className="text-white font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
+        <Link to={`/service-details/${petcare.serviceId}`} className="text-white font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
             View Details →
-          </button>
+          </Link>
       </div>
     </div>
   );
