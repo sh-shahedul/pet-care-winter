@@ -31,6 +31,7 @@
 import React from "react";
 import { useLoaderData, useParams, Link } from "react-router";
 import { FaStar, FaTag, FaEnvelope, FaCalendarAlt, FaArrowLeft } from "react-icons/fa";
+import Booked from "../Booked/Booked";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -49,7 +50,8 @@ const ServiceDetails = () => {
   }
 
   return (
-    <div className=" bg-gradient-to-br from-orange-50 to-orange-100 flex justify-center items-center py-12 px-4">
+    <div className="bg-gradient-to-br from-orange-50 to-orange-100 ">
+            <div className=" flex justify-center items-center py-12 px-4">
       <div
         className="card lg:card-side bg-white shadow-2xl rounded-3xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500"
         
@@ -119,6 +121,10 @@ const ServiceDetails = () => {
           </div>
         </div>
       </div>
+
+       
+    </div>
+     <Booked></Booked>
     </div>
   );
 };
