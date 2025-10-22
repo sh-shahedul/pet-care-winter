@@ -5,6 +5,8 @@ import Footer from "../Components/Footer/Footer";
 import Services from "../Pages/Services/Services";
 import Profile from "../Pages/Profile/Profile";
 import ServiceDetails from "../Components/ServiceDetails/ServiceDetails";
+import Login from "../Components/LogIn/Login";
+import Register from "../Components/Register/Register";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +35,16 @@ export const router = createBrowserRouter([
         {
             path:'profile',
             element:<Profile></Profile>
+
+        },
+        {
+            path:'login',
+            element:<Login></Login>
+
+        },
+        {
+            path:'register',
+            element:<Register></Register>
 
         },
     ]
