@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdOutlinePets } from 'react-icons/md';
 import { Link } from 'react-router';
 
 const ServiceSection = () => {
@@ -25,10 +26,10 @@ const ServiceSection = () => {
 
   return (
     <div className="text-center py-16 max-w-7xl mx-auto px-4  ">
-      <p className="text-orange-500 font-semibold mb-2">🐾 Our Services 🐾</p>
+      <p className="text-orange-500 text-xl font-semibold mb-2 flex justify-center items-center"><MdOutlinePets />&nbsp; Our Services &nbsp;<MdOutlinePets/>   </p>
       <h2 className="text-4xl font-bold mb-12 hover:text-orange-500">Our one-stop solution for premium pet care</h2>
 
-      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 mb-8">
+      <div className="flex flex-col md:flex-row  justify-center items-center gap-8 mb-8">
         {services.map((service, index) => (
           <div
             key={index}
