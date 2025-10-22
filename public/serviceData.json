@@ -1,0 +1,125 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co/vCPS2jST/c1.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming  Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo to protect from dryness.",
+    "image": "https://i.pinimg.com/736x/3e/e1/ec/3ee1ec1ba96444fc42bd9c4556f6c2db.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Pet Bed Rental",
+    "providerName": "WarmPaws Center",
+    "providerEmail": "support@warmpaws.com",
+    "price": 20,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Rent a cozy, temperature-controlled bed to keep your pet warm and safe during freezing nights.",
+    "image": "https://i.ibb.co/rVjxg5z/c3.jpg",
+    "category": "Comfort"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Joint Pain & Arthritis Therapy",
+    "providerName": "HappyTail Medical Spa",
+    "providerEmail": "therapy@happytail.com",
+    "price": 45,
+    "rating": 5.0,
+    "slotsAvailable": 2,
+    "description": "Therapeutic massage and heat therapy sessions to relieve joint pain and arthritis symptoms in senior pets during cold weather.",
+    "image": "https://i.pinimg.com/1200x/cc/66/3b/cc663b3d6e62c2f03093f9bb96004054.jpg",
+    "category": "Sickness Care"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Nutritional Winter Diet Plan",
+    "providerName": "HealthyTail Nutrition",
+    "providerEmail": "care@healthytail.com",
+    "price": 18,
+    "rating": 4.9,
+    "slotsAvailable": 8,
+    "description": "Customized meal plans to boost your pet’s immunity and energy during the winter season.",
+    "image": "https://i.ibb.co/RTwPNxXf/nutri.webp",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Cold & Flu Treatment for Pets",
+    "providerName": "PawHealers Center",
+    "providerEmail": "support@pawhealers.com",
+    "price": 35,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Professional treatment for pets suffering from cold, flu, or mild respiratory infections during winter season.",
+    "image": "https://i.pinimg.com/1200x/d7/ad/bd/d7adbd69d8cd517036aa212e1d989d18.jpg",
+    "category": "Sickness Care"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Warm Pet Walking Service",
+    "providerName": "HappyPaws Walkers",
+    "providerEmail": "walks@happypaws.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Professional pet walkers with winter gear and safety measures to ensure your pet stays active and warm.",
+    "image": "https://i.pinimg.com/1200x/12/1d/08/121d084dce31e8780dbaafcc01de7b99.jpg",
+    "category": "Exercise"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Winter Vaccination & Checkup",
+    "providerName": "ArcticVet Clinic",
+    "providerEmail": "contact@arcticvet.com",
+    "price": 40,
+    "rating": 5.0,
+    "slotsAvailable": 7,
+    "description": "Comprehensive winter health checkup and seasonal vaccinations to keep your pet healthy.",
+    "image": "https://i.ibb.co/yFnwj4MM/vac.jpg",
+    "category": "Healthcare"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Pet Winter Photography",
+    "providerName": "SnowyLens Studio",
+    "providerEmail": "photos@snowylens.com",
+    "price": 35,
+    "rating": 5.0,
+    "slotsAvailable": 2,
+    "description": "Capture your pet’s adorable winter moments with professional outdoor or indoor photography sessions.",
+    "image": "https://i.pinimg.com/1200x/00/10/cd/0010cdc646f1fa608c772292d06c9947.jpg",
+    "category": "Photography"
+  },
+  {
+    "serviceId": 10,
+    "serviceName": "Winter Vet Health Checkup",
+    "providerName": "FurLife Veterinary Clinic",
+    "providerEmail": "health@furlifevet.com",
+    "price": 40,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Full winter medical checkup for pets including temperature monitoring, joint inspection, and respiratory health assessment.",
+    "image": "https://i.pinimg.com/1200x/a8/40/07/a840070f4cbfc2a71a7e8b5f30f5a989.jpg",
+    "category": "Sickness Care"
+  }
+
+
+
+]
