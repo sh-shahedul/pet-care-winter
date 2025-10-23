@@ -9,11 +9,14 @@ import Login from "../Components/LogIn/Login";
 import Register from "../Components/Register/Register";
 import PrivateRouter from "../Provider/PrivateRouter";
 import Loading from "../Components/Loading/Loading";
+import Error from "../Components/Error/Error";
+import ForgotPassword from "../Components/ResetPassword/ForgotPassword";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayOut></HomeLayOut>,
+    errorElement:<Error></Error>,
     hydrateFallbackElement:<Loading></Loading>,
     children: [
         {
@@ -50,6 +53,10 @@ export const router = createBrowserRouter([
             element:<Register></Register>
 
         },
+        {
+           path:'forgotpass',
+           element:<ForgotPassword></ForgotPassword>
+        }
     ]
   },
 ]);

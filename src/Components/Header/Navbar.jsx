@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 
 import { AuthContext } from '../../Provider/AuthContex';
+import toast from 'react-hot-toast';
 
 
 const Navbar = () => {
@@ -19,12 +20,13 @@ const Navbar = () => {
          signOutUser()
          .then((result)=>{
           console.log(result.user)
-          
+          toast.success('logout sucessful')
         
           
          })
          .catch((error)=>{
           console.log(error)
+          
          })
     }
 
@@ -62,14 +64,14 @@ const Navbar = () => {
     alt="User"
   />
   }
-  <div className="absolute -left-35 top-0  bg-gradient-to-r from-orange-400 to-pink-500 text-white text-base px-2 py-2 rounded-md opacity-0 group-hover:opacity-100  duration-300 shadow-md">
+  <div className="absolute -left-35 top-0  bg-linear-to-r from-orange-400 to-pink-500 text-white text-base px-2 py-2 rounded-md opacity-0 group-hover:opacity-100  duration-300 shadow-md">
     { user?.displayName}
   </div>
 </div>
     {
-      user? <button onClick={handelLogOut} className="text-white font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none">
+      user? <button onClick={handelLogOut} className="text-white font-bold px-4 py-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none">
      Sign Out
-     </button>:<Link to='/login' className="text-white font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none">
+     </button>:<Link to='/login' className="text-white font-bold px-4 py-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none">
      Sign In
      </Link>
     }

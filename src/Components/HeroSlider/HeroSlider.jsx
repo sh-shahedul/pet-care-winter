@@ -14,7 +14,7 @@ const HeroSlider = () => {
           <h3 className='text-xl font-semibold text-orange-500'>WELCOME TO PET FROSTY</h3>
           <h1 className='text-5xl font-bold mt-5 '>The Best Care for Your Best Friend</h1>
           <p className='text-base text-gray-500 mt-5 font-semibold mb-5'>At Pet Frosty, we provide exceptional care and services for your pets, including <br /> grooming, boarding, and walking. Trust us to ensure your furry friends are <br /> happy.</p>
-           <Link to='/service' className="text-base  font-bold text-white rounded-2xl px-4 py-2 bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:scale-105  transition-all">
+           <Link to='/service' className="text-base  font-bold text-white rounded-2xl px-4 py-2 bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:scale-105  transition-all">
          Our Services
         </Link>
 

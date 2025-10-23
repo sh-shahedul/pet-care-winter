@@ -1,4 +1,4 @@
-import React, { use, useRef, useState } from 'react';
+import React, { use,  useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Provider/AuthContex';
 import { PiEyeBold } from 'react-icons/pi';
@@ -8,10 +8,11 @@ import toast from "react-hot-toast"
 const LogIn = () => {
    const[success,setSuccess]=useState('')
    const[error,setError]=useState('')
+   const [email, setEmail] = useState("");
     const navigate = useNavigate()
    const[show,setShow]=useState(false)
-    const emailRef = useRef()
-  const {signinUser,googleUser,forgotUser} =use(AuthContext)
+    // const emailRef = useRef()
+  const {signinUser,googleUser} =use(AuthContext)
    const location = useLocation()
    console.log(location)
   //  const navigate = useNavigate()
@@ -69,16 +70,16 @@ const LogIn = () => {
         setShow(!show)
       }
 
-      const handelForgotPassword=()=>{
-         const email = emailRef.current.value
-         forgotUser(email)
-         .then(()=>{
-           alert('please check your email')
-         })
-         .catch(error=>{
-          setError(error.message)
-         })
-    }
+    //   const handelForgotPassword=()=>{
+    //      const email = emailRef.current.value
+    //      forgotUser(email)
+    //      .then(()=>{
+    //        alert('please check your email')
+    //      })
+    //      .catch(error=>{
+    //       setError(error.message)
+    //      })
+    // }
 
     return (
         <div className='flex justify-center min-h-screen items-center bg-orange-100'>
@@ -91,7 +92,9 @@ const LogIn = () => {
           {/* email  */}
           <label className="label">Email address</label>
           <input 
-          ref={emailRef}
+          // ref={emailRef}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           type="email" 
           name='email' 
           className="input"
@@ -108,14 +111,14 @@ const LogIn = () => {
          
                      <p onClick={()=>handelShow(!show)} className='absolute top-3 right-8 cursor-pointer'>{show?<PiEyeBold size={18}/>:<TbEyeClosed size={18}/>}</p>
                    </div>
-          <div><a onClick={handelForgotPassword} type='button' className="link link-hover">Forgot password?</a></div>
+          <div><Link to='/forgotpass'  state={{ email: email }} type='button' className="link link-hover">Forgot password?</Link></div>
            {
             error &&  <h1 className='text-red-600 font-medium'>{error}</h1>
           }
           {
             success &&  <h1 className='text-green-600 font-medium'>{success}</h1>
           }
-          <button className="text-white mt-2 font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none">Login</button>
+          <button className="text-white mt-2 font-bold px-4 py-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none">Login</button>
           
                  </fieldset>
             </form>

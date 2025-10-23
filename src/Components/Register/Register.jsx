@@ -59,9 +59,9 @@ const Register = () => {
             setSuccess('Login Successful!')
             e.target.reset()
             toast.success("🎉 Login Successful!");
-            updateProfileuser({ displayName: name,  photoURL: photo  })
+            updateProfileuser({ displayName : name ,  photoURL : photo  })
             .then(()=>{
-                 setuser({...result.user, displayName: name,  photoURL: photo  })
+                 setuser({...result.user , displayName : name ,  photoURL : photo  })
             })
             .catch((error)=>{
                 console.log(error)

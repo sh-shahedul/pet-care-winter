@@ -5,7 +5,7 @@ import { auth } from '../Firebase/firebase.init';
 
 const googleProvider = new GoogleAuthProvider()
 const AuthProvider = ({children}) => {
-    const[user,setuser]=useState(null)
+    const[user,setuser]=useState()
      const[loading,setLoading]=useState(true)
 
     //   email password 
@@ -27,7 +27,7 @@ const AuthProvider = ({children}) => {
    }
      const updateProfileuser = (updateData)=>{
         setLoading(true)
-    return updateProfile(auth.currentUser, updateData)
+    return updateProfile(auth.currentUser,updateData )
   }
 
 
