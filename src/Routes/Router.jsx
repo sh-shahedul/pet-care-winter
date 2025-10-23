@@ -36,6 +36,7 @@ export const router = createBrowserRouter([
         },{
             path:'/service-details/:id',
             element:<PrivateRouter><ServiceDetails></ServiceDetails></PrivateRouter>,
+            
             loader:()=>fetch('/serviceData.json')
         },
         {
