@@ -7,11 +7,14 @@ import Profile from "../Pages/Profile/Profile";
 import ServiceDetails from "../Components/ServiceDetails/ServiceDetails";
 import Login from "../Components/LogIn/Login";
 import Register from "../Components/Register/Register";
+import PrivateRouter from "../Provider/PrivateRouter";
+import Loading from "../Components/Loading/Loading";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayOut></HomeLayOut>,
+    hydrateFallbackElement:<Loading></Loading>,
     children: [
         {
             index:true,
@@ -29,12 +32,12 @@ export const router = createBrowserRouter([
 
         },{
             path:'/service-details/:id',
-            element:<ServiceDetails></ServiceDetails>,
+            element:<PrivateRouter><ServiceDetails></ServiceDetails></PrivateRouter>,
             loader:()=>fetch('/serviceData.json')
         },
         {
             path:'profile',
-            element:<Profile></Profile>
+            element:<PrivateRouter><Profile></Profile></PrivateRouter>
 
         },
         {

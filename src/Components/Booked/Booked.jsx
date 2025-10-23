@@ -1,9 +1,9 @@
 import React from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from "react-hot-toast"
 const handelbooking=(e)=>{
     e.preventDefault()
     console.log('clicked')
-    toast.success("Your pet appointment has been booked! 🐾");
+    toast.success("Your pet appointment has been booked! ");
     e.target.reset()
     
 }
@@ -38,7 +38,7 @@ const Booked = () => {
       </div>
     </div>
   </div>
-  <Toaster />
+
 </div>
     );
 };

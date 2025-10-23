@@ -1,33 +1,3 @@
-// import React from 'react';
-// import { useLoaderData, useParams } from 'react-router';
-
-// const ServiceDetails = () => {
-    
-//     const {id}=useParams()
-//     const serviceses =useLoaderData()
-//     console.log(id,serviceses)
-
-  
-
-//         const service = serviceses.find(s=>s.serviceId===Number(id))
-//         console.log(service)
-        
-   
-
-//     return (
-//         <div>
-//            <h1>{service.providerName}</h1>
-//         </div>
-//     );
-// };
-
-// export default ServiceDetails;
-
-
-
-
-
-
 import React from "react";
 import { useLoaderData, useParams, Link } from "react-router";
 import { FaStar, FaTag, FaEnvelope, FaCalendarAlt, FaArrowLeft } from "react-icons/fa";
@@ -41,8 +11,8 @@ const ServiceDetails = () => {
 
   if (!service) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <h2 className="text-2xl font-semibold text-gray-600">
+      <div className="flex justify-center items-center min-h-screen bg-orange-50">
+        <h2 className="text-4xl font-semibold text-gray-600">
           Service not found 😢
         </h2>
       </div>

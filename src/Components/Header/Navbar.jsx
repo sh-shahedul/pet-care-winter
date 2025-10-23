@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
-import userlogo from '../../assets/user.png'
+
+import { AuthContext } from '../../Provider/AuthContex';
+
 
 const Navbar = () => {
+  const {user,signOutUser}=use(AuthContext)
+ 
  const   links = <>
     
 <li className='font-bold text-base '><NavLink to='/'>Home</NavLink></li>
 <li className='font-bold text-base '><NavLink to='/service'>Services</NavLink></li>
-<li className='font-bold text-base '><NavLink to='/profile'>My Profile</NavLink></li>
-
-    
-    
+<li className='font-bold text-base '><NavLink to='/profile'>My Profile</NavLink></li>   
     </>
+
+  
+    const handelLogOut =()=>{
+         signOutUser()
+         .then((result)=>{
+          console.log(result.user)
+          
+        
+          
+         })
+         .catch((error)=>{
+          console.log(error)
+         })
+    }
+
     return (
         <div className="navbar  ">
   <div className="navbar-start">
@@ -36,30 +52,30 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-3">
-    <img className='w-8 h-8 rounded-full' src={userlogo} alt="" />
-    <Link to='/login' className="text-white font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none">
- Sign In
-</Link>
+      
+    {/* <img className='w-10 h-10 rounded-full' title={user ? user.displayName:''} src={user ? user.photoURL: userlogo} alt="" /> */}
+  <div className="relative group inline-block">
+  {
+    user && <img
+    className="w-10 h-10 rounded-full border-2 border-orange-400 cursor-pointer"
+    src={user.photoURL }
+    alt="User"
+  />
+  }
+  <div className="absolute -left-35 top-0  bg-gradient-to-r from-orange-400 to-pink-500 text-white text-base px-2 py-2 rounded-md opacity-0 group-hover:opacity-100  duration-300 shadow-md">
+    { user?.displayName}
+  </div>
+</div>
+    {
+      user? <button onClick={handelLogOut} className="text-white font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none">
+     Sign Out
+     </button>:<Link to='/login' className="text-white font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none">
+     Sign In
+     </Link>
+    }
   </div>
 </div>
     );
 };
 
-export default Navbar;
-
-
-
-
-
-
-
-
-
-
-  <div  className="flex gap-7 items-center mt-4 ml-auto">
-                  {/* <div className='md:font-bold md:block hidden text-secondary'>{user && user.displayName}</div> */}
-                <img className='w-10 h-10 rounded-full' src=''alt="" />
-                {/* {
-                    user ? <button onClick={handelSignout}  className='btn btn-primary px-10'>SignOut</button>: <Link to='/auth/login' className='btn btn-primary px-10'>SignIn</Link>
-                } */}
-            </div>
+    export default Navbar;     
