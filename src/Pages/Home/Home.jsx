@@ -9,6 +9,7 @@ import HomeLayOut from '../../LayOuts/HomeLayOut';
 import Adopt from '../../Components/Adopt/Adopt';
 import { MdOutlinePets } from 'react-icons/md';
 import ServiceTitle from '../../Components/ServiceTitle/ServiceTitle';
+import DogScrollAnimation from '../../Components/Animation/DogScrollAnimation';
     
 const Home = () => {
     const data= useLoaderData()
@@ -20,6 +21,7 @@ const Home = () => {
                 <HeroSlider></HeroSlider>
 
                  <ServiceTitle></ServiceTitle>
+                 <DogScrollAnimation></DogScrollAnimation>
             </section>
              
 
@@ -39,7 +41,7 @@ const Home = () => {
                </aside>
 
             </main> */}
-<main className="grid grid-cols-1 md:grid-cols-12 gap-5 mt-10 px-3 md:px-6">
+<main className="grid grid-cols-1 md:grid-cols-12 gap-5  px-3 md:px-6">
   
   {/* 🐾 Main Content */}
   <div className="md:col-span-7 lg:col-span-9 flex items-center justify-center ">

@@ -11,7 +11,7 @@ const Error = () => {
         <div>
             <Navbar></Navbar>
            
-        <div className='bg-orange-50'>
+        <div className='bg-linear-to-br from-orange-100 via-orange-200 to-orange-50'>
             <div className='flex flex-col justify-center items-center md:p-30 p-5'>
                 <img className='md:w-[300px] w-[150px]' src={errorImage} alt="" />
             <h1 className='md:text-4xl text-2xl font-bold mt-5'>Oops, page not found!</h1>
