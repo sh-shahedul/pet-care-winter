@@ -2,6 +2,7 @@ import React from "react";
 import { useLoaderData, useParams, Link } from "react-router";
 import { FaStar, FaTag, FaEnvelope, FaCalendarAlt, FaArrowLeft } from "react-icons/fa";
 import Booked from "../Booked/Booked";
+import NotFound from "../Error/NotFound";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -11,11 +12,7 @@ const ServiceDetails = () => {
 
   if (!service) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-orange-50">
-        <h2 className="text-4xl font-semibold text-gray-600">
-          Service not found 😢
-        </h2>
-      </div>
+      <NotFound></NotFound>
     );
   }
 
@@ -37,7 +34,7 @@ const ServiceDetails = () => {
 
         {/* Right Details */}
         <div className="card-body lg:w-1/2 w-full p-8">
-          <h2 className="card-title text-4xl font-bold text-orange-600 mb-4">
+          <h2 className="card-title md:text-4xl text-xl font-bold text-orange-600 mb-4">
             {service.serviceName}
           </h2>
 
@@ -59,15 +56,19 @@ const ServiceDetails = () => {
             <span className='font-bold'>Description :</span> {service.description}
           </p>
 
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex justify-between items-end mb-6">
             <div>
               <h3 className="text-lg text-gray-600 font-bold">Price :</h3>
-              <p className="text-3xl font-bold text-orange-500">
+              <p className="md:text-3xl text-2xl font-bold text-orange-500">
                 ${service.price}
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <FaStar className="text-yellow-400" />
+            <div className="flex items-center gap-2 md:mr-4">
+              <FaStar className="text-yellow-400 size-5" />
+              <FaStar className="text-yellow-400 size-5" />
+              <FaStar className="text-yellow-400 size-5" />
+              <FaStar className="text-yellow-400 size-5" />
+              <FaStar className="text-yellow-400 size-5" />
               <span className="text-lg font-semibold">{service.rating}</span>
             </div>
           </div>

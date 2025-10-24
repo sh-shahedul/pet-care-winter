@@ -76,19 +76,19 @@ const teamMembers = [
     name: 'Pearlie Bowman',
     role: 'Veterinarian',
     image: 'https://i.ibb.co/Pz90c2BG/team-1.webp',
-    facebook: <FaFacebook></FaFacebook>
+   
   },
   {
     name: 'David Warner',
     role: 'Pet Groomer',
     image: 'https://i.ibb.co/G3McxqHJ/team-2.webp',
-    facebook: <FaFacebook></FaFacebook>
+    
   },
   {
     name: 'Brooklyn Simmons',
     role: 'Pet Nutritionist',
     image: 'https://i.ibb.co/n4zc5r6/team-3.webp',
-    facebook: <FaFacebook></FaFacebook>
+    
   },
 ];
 

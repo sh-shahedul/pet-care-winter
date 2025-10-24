@@ -49,14 +49,15 @@ const WinterTips = () => {
   return (
     <div data-aos="fade-left"
       className="max-w-sm mx-auto bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transform transition-all duration-500 p-3">
-      <h2 className="text-4xl font-bold text-center mb-10 text-orange-500">
+      <h2 className="md:text-4xl text-3xl  px-2 mt-5 font-bold text-center mb-10 text-orange-500">
         Winter Care Tips for Pets
       </h2>
-      <div className="flex flex-col gap-5 items-center justify-center">
+      <div className="divider before:bg-orange-500 after:bg-orange-500 px-10"></div>
+      <div className="flex flex-col gap-5 items-center justify-center ">
         {tips.map((tip) => (
           <div
             key={tip.id}
-            className="bg-white rounded-3xl shadow-lg p-6 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="bg-white rounded-3xl shadow-lg p-6 hover:shadow-2xl hover:scale-105 transition-all duration-300 border-t border-gray-100"
           >
             <h3 className="text-xl font-bold mb-2 text-orange-600">{tip.title}</h3>
             <p className="text-gray-700">{tip.description}</p>

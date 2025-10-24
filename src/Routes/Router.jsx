@@ -11,6 +11,7 @@ import PrivateRouter from "../Provider/PrivateRouter";
 import Loading from "../Components/Loading/Loading";
 import Error from "../Components/Error/Error";
 import ForgotPassword from "../Components/ResetPassword/ForgotPassword";
+import NotFound from "../Components/Error/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ export const router = createBrowserRouter([
         },{
             path:'/service-details/:id',
             element:<PrivateRouter><ServiceDetails></ServiceDetails></PrivateRouter>,
-            
+            errorElement:<NotFound></NotFound>,
             loader:()=>fetch('/serviceData.json')
         },
         {

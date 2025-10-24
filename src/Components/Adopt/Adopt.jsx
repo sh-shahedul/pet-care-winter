@@ -50,13 +50,13 @@ const Adopt = () => {
 
   return (
     <section
-      className="bg-orange-50  rounded-t-full py-16 px-6 md:px-12 lg:px-20"
+      className="bg-orange-50  rounded-t-full md:py-16 py-5 px-6 md:px-12 lg:px-20"
       data-aos="fade-up"
     >
       <div className="max-w-6xl mx-auto text-center mb-20">
         <div className="flex justify-center items-center gap-2 mt-30 mb-10">
           <FaPaw className="text-orange-500 text-3xl animate-bounce" />
-          <h2 className="text-4xl font-bold text-orange-500">Adopt a Friend</h2>
+          <h2 className="md:text-4xl text-3xl font-bold text-orange-500">Adopt a Friend</h2>
            <FaPaw className="text-orange-500 text-3xl animate-bounce" />
         </div>
         <p className="text-gray-600 max-w-2xl mx-auto">

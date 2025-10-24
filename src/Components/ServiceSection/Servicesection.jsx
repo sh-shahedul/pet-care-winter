@@ -27,7 +27,7 @@ const ServiceSection = () => {
   return (
     <div className="text-center py-16 max-w-7xl mx-auto px-4  ">
       <p className="text-orange-500 text-xl font-semibold mb-2 flex justify-center items-center"><MdOutlinePets />&nbsp; Our Services &nbsp;<MdOutlinePets/>   </p>
-      <h2 className="text-4xl font-bold mb-12 hover:text-orange-500">Our one-stop solution for premium pet care</h2>
+      <h2 className="md:text-4xl text-3xl font-bold mb-12 bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">Our one-stop solution for premium pet care</h2>
 
       <div className="flex flex-col md:flex-row  justify-center items-center gap-8 mb-8">
         {services.map((service, index) => (
@@ -42,9 +42,13 @@ const ServiceSection = () => {
         ))}
       </div>
 
-      <Link to='/service' className="text-white mt-8 font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
+      <Link to='/service' className="text-white mt-8 font-bold px-4 py-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
         More Services →
       </Link>
+
+
+     
+
     </div>
   );
 };

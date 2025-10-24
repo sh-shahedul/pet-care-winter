@@ -9,7 +9,7 @@ const Footer = () => {
             <h6 className="link no-underline">
               <Link
                 to={"/"}
-                className="md:text-2xl text-xs font-bold text-white"
+                className="text-2xl  font-bold text-white"
               >
                 Pet <span className="text-orange-500"> Frosty</span>
               </Link>
@@ -106,8 +106,8 @@ const Footer = () => {
                <footer className="max-w-full mx-auto footer sm:footer-horizontal footer-center border-t border-gray-500 text-white p-3 md:p-4 font-WorkSans bg-black">
           <aside>
             <p className="md:text-sm text-xs">
-              Copyright © {new Date().getFullYear()} - All right reserved by
-              ToyTales
+              Copyright © {new Date().getFullYear()} - All right reserved by Pet Frosty
+             
             </p>
           </aside>
         </footer>

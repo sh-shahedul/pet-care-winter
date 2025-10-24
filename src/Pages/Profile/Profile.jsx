@@ -38,7 +38,7 @@ const MyProfile = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-orange-50 via-red-100 to-orange-100 p-6">
+    <div className="min-h-screen flex justify-center items-center bg-linear-to-br from-orange-50 via-red-100 to-orange-100 p-6">
       <div className="max-w-5xl w-full bg-white rounded-2xl shadow-xl p-8 flex flex-col md:flex-row gap-10">
         
         {/* ===== Left Side ===== */}
@@ -108,7 +108,7 @@ const MyProfile = () => {
            {/* Update Button */}
           <button
             onClick={handleUpdateProfile}
-            className="text-white font-bold px-4 py-2 rounded-2xl bg-gradient-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 "
+            className="text-white font-bold px-4 py-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 "
           >
             Update Profile
           </button>
