@@ -1,14 +1,12 @@
 
 import React, { useContext, useState, useEffect } from "react";
 import { updateProfile } from "firebase/auth";
-
-import toast from "react-hot-toast";
+ import toast from "react-hot-toast";
 import { AuthContext } from "../../Provider/AuthContex";
 import logo from '../../assets/user.png'
 import { MdVerifiedUser } from "react-icons/md";
-const MyProfile = () => {
-  const { user, setuser } = useContext(AuthContext);
-
+   const MyProfile = () => {
+   const { user, setuser } = useContext(AuthContext);
   const [fullName, setFullName] = useState("");
   const [photoURL, setPhotoURL] = useState("");
   const [address, setAddress] = useState("");
@@ -41,7 +39,7 @@ const MyProfile = () => {
     <div className="min-h-screen flex justify-center items-center bg-linear-to-br from-orange-50 via-red-100 to-orange-100 p-6">
       <div className="max-w-5xl w-full bg-white rounded-2xl shadow-xl p-8 flex flex-col md:flex-row gap-10">
         
-        {/* ===== Left Side ===== */}
+        {/*  Left Side  */}
         <div className="w-full md:w-1/3 flex flex-col items-center">
           {/* Title */}
           <h2 className="text-2xl font-bold text-orange-500 mb-6">
@@ -60,7 +58,7 @@ const MyProfile = () => {
          
         </div>
 
-        {/* ===== Right Side ===== */}
+        {/*  Right Side */}
         <div className="w-full md:w-2/3">
           {/* Name */}
           <h3 className="font-bold text-xl mb-2">Change Your Information</h3>

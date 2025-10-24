@@ -1,80 +1,31 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import pet1 from '../../assets/pet-1.jpg'
-import pet2 from '../../assets/pet-2.jpg'
-import pet3 from '../../assets/pet-3.jpg'
-import pet4 from '../../assets/pet-4.jpg'
-import pet5 from '../../assets/pet-5.jpg'
-import bgimg from '../../assets/hero-bg.jpg'
-import { Link } from 'react-router';
-const HeroSlider = () => {
+ import React from 'react';
+ import { Swiper, SwiperSlide } from "swiper/react";
+ import { Navigation, Pagination, Autoplay } from "swiper/modules";
+ import pet1 from '../../assets/pet-1.jpg'
+ import pet2 from '../../assets/pet-2.jpg'
+ import pet3 from '../../assets/pet-3.jpg'
+ import pet4 from '../../assets/pet-4.jpg'
+ import pet5 from '../../assets/pet-5.jpg'
+ import bgimg from '../../assets/hero-bg.jpg'
+ import { Link } from 'react-router';
+ import "swiper/css";
+ import "swiper/css/navigation";
+ import "swiper/css/pagination";
+ const HeroSlider = () => {
     return (
-
-      <div style={{ backgroundImage: `url(${bgimg})` }} className='bg-cover bg-center bg-no-repeat h-auto sm:h-auto md:h-[500px] lg:h-[650px]   flex md:flex-row flex-col justify-center items-start gap-10 md:px-10 p  ' >
-         <div className='flex-1 md:mt-20 mt-10 w'>  
+         <div style={{ backgroundImage: `url(${bgimg})` }} className='bg-cover bg-center bg-no-repeat h-auto sm:h-auto md:h-[550px] lg:h-[650px] flex md:flex-row flex-col justify-center items-start gap-10 md:px-10  ' >
+         <div className='flex-1 md:mt-20 mt-10 p-4'>  
           <h3 className='text-xl font-semibold text-orange-500 md:text-left text-center'>WELCOME TO PET FROSTY</h3>
-          <h1 className='md:text-5xl md:text-left text-center text-3xl font-bold mt-5 '>The Best Care for Your Best Friend</h1>
-          <p className='text-base text-gray-500 mt-5 font-semibold mb-5 md:text-left text-center'>At Pet Frosty, we provide exceptional care and services for your pets, including <br /> grooming, boarding, and walking. Trust us to ensure your furry friends are <br /> happy.</p>
+          <h1 className='lg:text-5xl md:text-4xl md:text-left text-center text-3xl font-bold mt-5 '>The Best Care for Your Best Friend</h1>
+          <p className='text-base text-gray-500 mt-5 font-semibold mb-5 md:text-left text-center max-w-[500px]'>At Pet Frosty, we provide exceptional care and services for your pets, including  grooming, boarding, and walking. Trust us to ensure your furry friends are  happy.</p>
            <div className='flex justify-center md:justify-start'>
             <Link to='/service' className="text-base  font-bold text-white rounded-2xl px-4 py-2 bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:scale-105  transition-all">
            Our Services
            </Link>
            </div>
+           </div>
 
-
-         </div>
-        {/* <div className="carousel md:w-[200px] md:h-[400px] flex-1  rounded-xl md:mt-20">
-  <div id="slide1" className="carousel-item relative w-full ">
-    <img
-    src={pet1}
-      className="w-full rounded-xl  " />
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between ">
-      <a href="#slide4" className="btn btn-circle">❮</a>
-      <a href="#slide2" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide2" className="carousel-item relative w-full">
-    <img
-      src={pet2}
-      className="w-full" />
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide1" className="btn btn-circle">❮</a>
-      <a href="#slide3" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide3" className="carousel-item relative w-full">
-    <img
-      src={pet3}
-      className="w-full" />
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide2" className="btn btn-circle">❮</a>
-      <a href="#slide4" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide4" className="carousel-item relative w-full">
-    <img
-      src={pet4}
-      className="w-full" />
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide3" className="btn btn-circle">❮</a>
-      <a href="#slide5" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide5" className="carousel-item relative w-full">
-    <img
-      src={pet5}
-      className="w-full" />
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide4" className="btn btn-circle">❮</a>
-      <a href="#slide1" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-       </div> */}
-       <div className="md:w-[200px] md:h-[400px] flex-1 rounded-xl md:mt-20">
+  <div className="w-full md:w-[220px] flex-1 rounded-xl md:mt-20 px-3 md:px-4">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
@@ -90,145 +41,18 @@ const HeroSlider = () => {
       >
         {[pet1, pet2, pet3, pet4, pet5].map((pet, index) => (
           <SwiperSlide key={index}>
-            <img
-              src={pet}
-              alt={`Pet ${index + 1}`}
-              className="w-full h-[400px] object-cover rounded-xl"
-            />
+            <div className="  rounded-xl flex items-center justify-center overflow-hidden">
+              <img
+                src={pet}
+                alt={`Pet ${index + 1}`}
+                className="w-full h-[250px] md:h-[400px] object-cover rounded-xl shadow-md"
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
-
-            
-      </div>
-
-       
+    </div>          
+      </div>    
     );
-};
-
-export default HeroSlider;
-
-
-
-
-
-// import React, { useState, useEffect } from 'react';
-// import pet1 from '../../assets/pet-1.jpg'
-// import pet2 from '../../assets/pet-2.jpg'
-// import pet3 from '../../assets/pet-3.jpg'
-// import pet4 from '../../assets/pet-4.jpg'
-// import pet5 from '../../assets/pet-5.jpg'
-// import bgimg from '../../assets/hero-bg.jpg'
-// import { Link } from 'react-router';
-
-// const HeroSlider = () => {
-//   const images = [pet1, pet2, pet3, pet4, pet5];
-//   const [current, setCurrent] = useState(0);
-
-  
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrent((prev) => (prev + 1) % images.length);
-//     }, 3000); // 
-//     return () => clearInterval(interval);
-//   }, [images.length]);
-
-//   return (
-//     <div style={{ backgroundImage: `url(${bgimg})` }} className='bg-cover bg-center bg-no-repeat h-auto sm:h-auto md:h-[500px] lg:h-[650px] flex md:flex-row flex-col justify-center items-start gap-10 md:px-10 p'>
-//       <div className='flex-1 md:mt-20 mt-10 w'>  
-//         <h3 className='text-xl font-semibold text-orange-500 md:text-left text-center'>WELCOME TO PET FROSTY</h3>
-//         <h1 className='md:text-5xl md:text-left text-center text-3xl font-bold mt-5'>The Best Care for Your Best Friend</h1>
-//         <p className='text-base text-gray-500 mt-5 font-semibold mb-5 md:text-left text-center'>
-//           At Pet Frosty, we provide exceptional care and services for your pets, including <br /> grooming, boarding, and walking. Trust us to ensure your furry friends are <br /> happy.
-//         </p>
-//         <div className='flex justify-center md:justify-start'>
-//           <Link to='/service' className="text-base font-bold text-white rounded-2xl px-4 py-2 bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:scale-105 transition-all">
-//             Our Services
-//           </Link>
-//         </div>
-//       </div>
-
-//       <div className="carousel md:w-[200px] md:h-[400px] flex-1 rounded-xl md:mt-20">
-//         {images.map((img, index) => (
-//           <div key={index} className={`carousel-item relative w-full ${index === current ? 'block' : 'hidden'}`}>
-//             <img src={img} className="w-full rounded-xl" />
-//             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-//               <a href="#!" className="btn btn-circle invisible">❮</a> {/* Arrow hidden, no manual change */}
-//               <a href="#!" className="btn btn-circle invisible">❯</a>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HeroSlider;
-
-
-
-
-
-
-
-
-// import React, { useState, useEffect } from 'react';
-// import pet1 from '../../assets/pet-1.jpg'
-// import pet2 from '../../assets/pet-2.jpg'
-// import pet3 from '../../assets/pet-3.jpg'
-// import pet4 from '../../assets/pet-4.jpg'
-// import pet5 from '../../assets/pet-5.jpg'
-// import bgimg from '../../assets/hero-bg.jpg'
-// import { Link } from 'react-router';
-
-// const HeroSlider = () => {
-//   const images = [pet1, pet2, pet3, pet4, pet5];
-//   const [current, setCurrent] = useState(0);
-
-//   // ✅ Auto slide
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrent((prev) => (prev + 1) % images.length);
-//     }, 3000);
-//     return () => clearInterval(interval);
-//   }, [images.length]);
-
-//   // Arrow functions
-//   const prevSlide = () => setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-//   const nextSlide = () => setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-
-//   return (
-//     <div style={{ backgroundImage: `url(${bgimg})` }} className='bg-cover bg-center bg-no-repeat h-auto sm:h-auto md:h-[500px] lg:h-[650px] flex md:flex-row flex-col justify-center items-start gap-10 md:px-10 p'>
-//       <div className='flex-1 md:mt-20 mt-10 w'>  
-//         <h3 className='text-xl font-semibold text-orange-500 md:text-left text-center'>WELCOME TO PET FROSTY</h3>
-//         <h1 className='md:text-5xl md:text-left text-center text-3xl font-bold mt-5'>The Best Care for Your Best Friend</h1>
-//         <p className='text-base text-gray-500 mt-5 font-semibold mb-5 md:text-left text-center'>
-//           At Pet Frosty, we provide exceptional care and services for your pets, including <br /> grooming, boarding, and walking. Trust us to ensure your furry friends are <br /> happy.
-//         </p>
-//         <div className='flex justify-center md:justify-start'>
-//           <Link to='/service' className="text-base font-bold text-white rounded-2xl px-4 py-2 bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:scale-105 transition-all">
-//             Our Services
-//           </Link>
-//         </div>
-//       </div>
-
-//       <div className="carousel md:w-[200px] md:h-[400px] flex-1 rounded-xl md:mt-20 relative px-5 md:pb-0 pb-3">
-//         {images.map((img, index) => (
-//           <div key={index} className={`carousel-item relative w-full ${index === current ? 'block' : 'hidden'}`}>
-//             <img src={img} className="w-full rounded-xl" />
-//           </div>
-//         ))}
-
-//         {/* ❮ ❯ Arrows */}
-//         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-//           <button onClick={prevSlide} className="btn btn-circle">❮</button>
-//           <button onClick={nextSlide} className="btn btn-circle">❯</button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HeroSlider;
-
+ };
+   export default HeroSlider;

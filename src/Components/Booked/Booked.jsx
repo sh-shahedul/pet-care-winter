@@ -2,7 +2,6 @@ import React from 'react';
 import toast from "react-hot-toast"
 const handelbooking=(e)=>{
     e.preventDefault()
-    console.log('clicked')
     toast.success("Your pet appointment has been booked! ");
     e.target.reset()
     
@@ -30,7 +29,7 @@ const Booked = () => {
           <input
            type="text"
             required 
-            // className="input h-12 text-orange-500 font-semibold w-full placeholder-gray-400" 
+            
             className="input w-full border border-orange-400 font-semibold h-12 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-orange-500 px-4"
             placeholder="Your name" />
           <label className="label">Email</label>

@@ -8,7 +8,7 @@ const AuthProvider = ({children}) => {
     const[user,setuser]=useState()
      const[loading,setLoading]=useState(true)
 
-    //   email password 
+    
      const createUser = (email,password)=>{
         setLoading(true)
         return createUserWithEmailAndPassword(auth,email,password)
@@ -28,9 +28,7 @@ const AuthProvider = ({children}) => {
      const updateProfileuser = (updateData)=>{
         setLoading(true)
     return updateProfile(auth.currentUser,updateData )
-  }
-
-
+   }
      const signOutUser =()=>{
         return signOut(auth)
      }
@@ -45,14 +43,8 @@ const AuthProvider = ({children}) => {
     return()=>{
         unSubscribe()
     }
-
-
-
-  },[])
-
-
-
-     const userInfo ={
+   },[])
+    const userInfo ={
         updateProfileuser,
         forgotUser,
         signinUser,

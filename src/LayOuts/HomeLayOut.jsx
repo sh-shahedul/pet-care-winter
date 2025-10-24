@@ -30,7 +30,7 @@ const HomeLayOut = () => {
            </header>
            <main className='flex-1'>
               {
-                state === 'loading' ? <Loading/> :<Outlet></Outlet>
+                state.loading === 'loading' ? <Loading/> :<Outlet></Outlet>
               }
            </main>
            <footer>

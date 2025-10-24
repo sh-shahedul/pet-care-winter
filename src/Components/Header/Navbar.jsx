@@ -18,18 +18,13 @@ const Navbar = () => {
   
     const handelLogOut =()=>{
          signOutUser()
-         .then((res)=>{
-          console.log(res)
-          toast.success('logout sucessful')
-        
-          
+         .then(()=>{
+          toast.success(' 👋 logout sucessful')         
          })
          .catch((error)=>{
           console.log(error)
-          
-         })
-   
-    }
+          })  
+      }
 
     return (
         <div className="navbar  ">
@@ -44,9 +39,9 @@ const Navbar = () => {
        {links}
       </ul>
     </div>
-   <a className="btn btn-ghost md:text-3xl text-2xl text-orange-500">
+   <Link to='/' className=" px-4 md:text-3xl text-2xl text-orange-500">
   Pet <span className="text-base inline-block align-top md:mt-3 mt-2 text-black font-semibold">Frosty</span>
-</a>
+</Link>
 
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -56,8 +51,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end gap-3">
       
-    {/* <img className='w-10 h-10 rounded-full' title={user ? user.displayName:''} src={user ? user.photoURL: userlogo} alt="" /> */}
-  <div className="relative group inline-block">
+   <div className="relative group inline-block">
   {
     user && <img
     className="w-10 h-10 rounded-full border-2 border-orange-400 cursor-pointer"

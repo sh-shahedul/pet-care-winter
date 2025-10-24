@@ -25,9 +25,8 @@ const Card = ({ petcare }) => {
       <div className="p-5 space-y-3">
         <h2 className="text-xl font-bold text-gray-800 hover:text-orange-500 transition-colors duration-300">
           {petcare.serviceName}
-        </h2>
-        {/* <p className="text-sm text-gray-500">  Rating: {petcare.rating}</p> */}
-        <div className="flex items-center gap-2">
+         </h2>
+          <div className="flex items-center gap-2">
                       <FaStar className="text-orange-400" />
                       <FaStar className="text-orange-400" />
                       <FaStar className="text-orange-400" />

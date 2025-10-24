@@ -49,7 +49,7 @@ const WinterTips = () => {
   return (
     <div data-aos="fade-left"
       className="max-w-sm mx-auto bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transform transition-all duration-500 p-3">
-      <h2 className="md:text-4xl text-3xl  px-2 mt-5 font-bold text-center mb-10 text-orange-500">
+      <h2 className="lg:text-4xl text-3xl  px-2 mt-5 font-bold text-center mb-10 text-orange-500">
         Winter Care Tips for Pets
       </h2>
       <div className="divider before:bg-orange-500 after:bg-orange-500 px-10"></div>

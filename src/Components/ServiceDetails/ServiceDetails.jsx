@@ -6,23 +6,18 @@ import NotFound from "../Error/NotFound";
 
 const ServiceDetails = () => {
   const { id } = useParams();
-  const services = useLoaderData();
-
-  const service = services.find((s) => s.serviceId === Number(id));
-
+   const services = useLoaderData();
+   const service = services.find((s) => s.serviceId === Number(id));
   if (!service) {
     return (
       <NotFound></NotFound>
     );
-  }
-
+   }
   return (
     <div className="bg-li-to-br from-orange-50 to-orange-100 ">
             <div className=" flex justify-center items-center py-12 px-4">
       <div
-        className="card lg:card-side bg-white shadow-2xl rounded-3xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500"
-        
-      >
+        className="card lg:card-side bg-white shadow-2xl rounded-3xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500">
         {/* Left Image */}
         <figure className="lg:w-1/2 w-full">
           <img
@@ -64,11 +59,11 @@ const ServiceDetails = () => {
               </p>
             </div>
             <div className="flex items-center gap-2 md:mr-4">
-              <FaStar className="text-yellow-400 size-5" />
-              <FaStar className="text-yellow-400 size-5" />
-              <FaStar className="text-yellow-400 size-5" />
-              <FaStar className="text-yellow-400 size-5" />
-              <FaStar className="text-yellow-400 size-5" />
+              <FaStar className="text-orange-400 size-5" />
+              <FaStar className="text-orange-400 size-5" />
+              <FaStar className="text-orange-400 size-5" />
+              <FaStar className="text-orange-400 size-5" />
+              <FaStar className="text-orange-400 size-5" />
               <span className="text-lg font-semibold">{service.rating}</span>
             </div>
           </div>
