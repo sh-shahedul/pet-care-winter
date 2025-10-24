@@ -1,4 +1,9 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import pet1 from '../../assets/pet-1.jpg'
 import pet2 from '../../assets/pet-2.jpg'
 import pet3 from '../../assets/pet-3.jpg'
@@ -22,7 +27,7 @@ const HeroSlider = () => {
 
 
          </div>
-        <div className="carousel md:w-[200px] md:h-[400px] flex-1  rounded-xl md:mt-20">
+        {/* <div className="carousel md:w-[200px] md:h-[400px] flex-1  rounded-xl md:mt-20">
   <div id="slide1" className="carousel-item relative w-full ">
     <img
     src={pet1}
@@ -68,7 +73,32 @@ const HeroSlider = () => {
       <a href="#slide1" className="btn btn-circle">❯</a>
     </div>
   </div>
-       </div>
+       </div> */}
+       <div className="md:w-[200px] md:h-[400px] flex-1 rounded-xl md:mt-20">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        className="rounded-xl"
+      >
+        {[pet1, pet2, pet3, pet4, pet5].map((pet, index) => (
+          <SwiperSlide key={index}>
+            <img
+              src={pet}
+              alt={`Pet ${index + 1}`}
+              className="w-full h-[400px] object-cover rounded-xl"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
 
             
       </div>
