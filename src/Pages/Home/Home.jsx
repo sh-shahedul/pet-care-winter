@@ -21,47 +21,7 @@ const Home = () => {
                   <ServiceTitle></ServiceTitle> 
                  <DogScrollAnimation></DogScrollAnimation>  
             </section>
- {/* <main className="grid grid-cols-1 md:grid-cols-12 gap-5 mt-10  px-3 md:px-6">
-  
-  
-  <div className="md:col-span-7 lg:col-span-9 flex items-center justify-center ">
-    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 w-full">
-      {data.map((petcare) => (
-        <Cards key={petcare.serviceId} petcare={petcare} />
-      ))}
-    </div>
-  </div>
-
-  
-  <aside className="md:col-span-5 lg:col-span-3 order-1 md:order-2">
-    <div className="sticky top-0"> 
-      <WinterTips />
-    </div>
-  </aside>
-
-</main> */}
-
-
-{/* 
-<main className="grid grid-cols-1 md:grid-cols-12 gap-5 mt-10 px-3 md:px-6">
-
-
-  <div className="md:col-span-7 lg:col-span-9 flex items-center justify-center order-1 md:order-1">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
-      {data.map((petcare) => (
-        <Cards key={petcare.serviceId} petcare={petcare} />
-      ))}
-    </div>
-  </div>
-
  
-  <aside className="md:col-span-5 lg:col-span-3 order-2 md:order-2">
-    <div className="sticky top-20">
-      <WinterTips />
-    </div>
-  </aside>
-
-</main> */}
 
 <main className="grid grid-cols-1 md:grid-cols-12 gap-5 mt-10 px-3 md:px-6">
 
