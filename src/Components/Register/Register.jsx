@@ -80,7 +80,7 @@ import { getFriendlyMessage } from '../errorMessage/errorMessage';
       }
      return (
         <div className='flex justify-center min-h-screen items-center bg-linear-to-br from-orange-100 via-orange-200 to-orange-50 '>
-             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+             <div className="card bg-white/35 w-full max-w-sm shrink-0 shadow-2xl">
             <div className="card-body">
 
             <form onSubmit={handelRegister}>
@@ -99,7 +99,7 @@ import { getFriendlyMessage } from '../errorMessage/errorMessage';
            <label className="label text-gray-800 font-semibold">PhotoURL</label>
           <input 
            type="text"
-           required
+          
            name='photo' 
            className="input w-full border border-orange-400 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-orange-500 px-4"
             placeholder="Photo URL" />

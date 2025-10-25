@@ -36,8 +36,8 @@ import { MdVerifiedUser } from "react-icons/md";
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-linear-to-br from-orange-50 via-red-100 to-orange-100 p-6">
-      <div className="max-w-5xl w-full bg-white rounded-2xl shadow-xl p-8 flex flex-col md:flex-row gap-10">
+    <div className="min-h-screen flex justify-center items-center bg-linear-to-br from-orange-100 via-orange-200 to-orange-50 p-6">
+      <div className="max-w-5xl w-full bg-white/25 rounded-2xl shadow-xl p-8 flex flex-col md:flex-row gap-10">
         
         {/*  Left Side  */}
         <div className="w-full md:w-1/3 flex flex-col items-center">
@@ -54,7 +54,7 @@ import { MdVerifiedUser } from "react-icons/md";
           />
             <h1 className="font-bold">{user.displayName}</h1>
             <h1 className="font-semibold">{user.email}</h1>
-            <h2 className="flex gap-1 items-center text-orange-500 font-medium text-base border-2 px-5 mt-3 py-1 rounded-lg border-orange-500"><MdVerifiedUser size={20} /> USER</h2>
+            <h2 className="flex gap-1 items-center text-orange-500 font-bold text-base border-2 px-5 mt-3 py-1 rounded-lg border-orange-500"><MdVerifiedUser size={20} /> USER</h2>
          
         </div>
 
