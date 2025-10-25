@@ -16,10 +16,12 @@ const Home = () => {
           
             <section>
                  <HeroSlider></HeroSlider>
-                 <ServiceTitle></ServiceTitle>
-                 <DogScrollAnimation></DogScrollAnimation>
+
+               
+                  <ServiceTitle></ServiceTitle> 
+                 <DogScrollAnimation></DogScrollAnimation>  
             </section>
- <main className="grid grid-cols-1 md:grid-cols-12 gap-5  px-3 md:px-6">
+ <main className="grid grid-cols-1 md:grid-cols-12 gap-5 mt-10  px-3 md:px-6">
   
   
   <div className="md:col-span-7 lg:col-span-9 flex items-center justify-center ">

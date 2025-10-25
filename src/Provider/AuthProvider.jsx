@@ -26,7 +26,7 @@ const AuthProvider = ({children}) => {
        return  sendPasswordResetEmail(auth,email)
    }
      const updateProfileuser = (updateData)=>{
-        setLoading(true)
+      
     return updateProfile(auth.currentUser,updateData )
    }
      const signOutUser =()=>{

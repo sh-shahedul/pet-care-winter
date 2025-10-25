@@ -14,7 +14,9 @@ const ServiceDetails = () => {
     );
    }
   return (
+    
     <div className="bg-li-to-br from-orange-50 to-orange-100 ">
+
             <div className=" flex justify-center items-center py-12 px-4">
       <div
         className="card lg:card-side bg-white shadow-2xl rounded-3xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500">

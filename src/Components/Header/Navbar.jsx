@@ -39,8 +39,8 @@ const Navbar = () => {
        {links}
       </ul>
     </div>
-   <Link to='/' className=" px-4 md:text-3xl text-2xl text-orange-500">
-  Pet <span className="text-base inline-block align-top md:mt-3 mt-2 text-black font-semibold">Frosty</span>
+   <Link to='/' className=" md:px-4 font-bold md:text-3xl text-2xl text-orange-500">
+  Pet <span className="text-base inline-block align-top md:mt-3 mt-2 text-black font-bold">Frosty</span>
 </Link>
 
   </div>
@@ -57,6 +57,7 @@ const Navbar = () => {
     className="w-10 h-10 rounded-full border-2 border-orange-400 cursor-pointer"
     src={user.photoURL|| logo}
     alt="User"
+    referrerPolicy='no-referrer'
   />
   }
   <div className="absolute -left-35 top-0  bg-linear-to-r from-orange-400 to-pink-500 text-white text-base px-2 py-2 rounded-md opacity-0 group-hover:opacity-100  duration-300 shadow-md">

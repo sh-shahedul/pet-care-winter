@@ -7,3 +7,14 @@ a.active{
     border-bottom: 4px solid rgb(255, 107, 48);
     color: rgb(255, 107, 48);
 }
+
+html,
+body {
+  
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}

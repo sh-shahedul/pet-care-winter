@@ -1,7 +1,8 @@
 import React, { use } from 'react';
 import ServiceSection from '../../Components/ServiceSection/Servicesection';
 import { AuthContext } from '../../Provider/AuthContex';
-import Loading from '../../Components/Loading/Loading'; 
+import Loading from '../../Components/Loading/Loading';
+  
 const Services = () => {
   const {loading}=use(AuthContext)
     return (

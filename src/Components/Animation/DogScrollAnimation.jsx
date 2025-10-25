@@ -23,7 +23,7 @@ const DogScrollAnimation = () => {
       <motion.img
         src="https://softivus.com/wp/petiva/wp-content/themes/petpath/assets/images/dog-vector-white.png"
         alt="dog"
-        className="md:w-32 md:h-32 w-20 h-20 left-0 z-50"
+        className="md:w-32 md:h-32 w-20 h-20 left-0 z-50 "
         style={{
           x,
           position: "absolute",
