@@ -14,7 +14,7 @@
  const HeroSlider = () => {
     return (
          <div style={{ backgroundImage: `url(${bgimg})` }} className='bg-cover bg-center bg-no-repeat h-auto sm:h-auto md:h-[550px] lg:h-[650px] flex md:flex-row flex-col justify-center items-start gap-10 md:px-10  ' >
-         <div className='flex-1 md:mt-20 mt-10 p-4'>  
+         <div className='flex-1 md:mt-20 mt-5 p-4'>  
           <h3 className='text-xl font-semibold text-orange-500 md:text-left text-center'>WELCOME TO PET FROSTY</h3>
           <h1 className='lg:text-5xl md:text-4xl md:text-left text-center text-3xl font-bold mt-5 '>The Best Care for Your Best Friend</h1>
           <p className='text-base text-gray-500 mt-5 font-semibold mb-5 md:text-left text-center max-w-[500px]'>At Pet Frosty, we provide exceptional care and services for your pets, including  grooming, boarding, and walking. Trust us to ensure your furry friends are  happy.</p>
