@@ -34,20 +34,20 @@ const stats = [
 
 const About = () => {
   return (
-    <div className="bg-gray-100 min-h-screen py-16 px-6 md:px-20">
+    <div className="bg-gray-100 min-h-screen pb-16 ">
 
-      {/* HEADER BANNER */}
+    
      {/* HERO SECTION */}
 <motion.div
   className="relative bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 
-             overflow-hidden rounded-2xl min-h-[280px] md:h-[300px] flex items-center"
+             overflow-hidden rounded-2xl min-h-[280px] md:h-[300px] flex items-center w-full"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.8 }}
 >
   <div className="absolute inset-0 bg-black/10" />
 
-  <div className="container mx-auto px-4 py-16 sm:py-20 lg:py-24 relative z-10">
+  <div className=" mx-auto px-4 py-16 sm:py-20  relative z-10">
     <motion.div
       className="max-w-3xl mx-auto text-center"
       initial={{ opacity: 0, y: 30 }}
@@ -81,7 +81,7 @@ const About = () => {
         key={index}
         variants={fadeInUp}
         className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 text-center 
-                   hover:shadow-2xl transition-all duration-300"
+                   hover:shadow-2xl transition-all duration-300 w-[95%] mx-auto"
       >
         {/* Icon */}
         <p className="flex justify-center text-xl sm:text-3xl hover:text-orange-600 mb-2 sm:mb-3">
@@ -104,22 +104,19 @@ const About = () => {
 
 
       {/* OUR MISSION */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-24 mt-20">
+      <div className=" grid md:grid-cols-2 gap-12 items-center mb-24 mt-20  max-w-screen-2xl mx-auto md:px-10 px-4 text-center sm:text-left">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
+          
         >
-          <h3 className="text-3xl font-bold mb-4 flex items-center gap-2 "><span className="animate-bounce">❄️</span> Our Mission</h3>
-          <p className="text-gray-700 mb-2">
-            Our mission is to protect every pet during the harsh winter season.
-            We aim to make winter care accessible, affordable, and safe for all pet owners.
+          <h3 className="text-3xl font-bold mb-4  gap-2 "><span className="animate-ping">❄️</span> Our Mission</h3>
+          <p className="text-gray-600 text-lg mb-2">
+           Our mission is to protect every pet during the harsh winter season. We strive to make winter care accessible, affordable, and safe for all pet owners. By providing medical support, cozy winter clothing, and emergency care, we ensure that no pet suffers from the cold. Our goal is to create a world where every pet can enjoy the warmth, comfort, and love they deserve, even in the coldest months
           </p>
-          <p className="text-gray-700">
-            Through medical support, winter clothing, and emergency care,
-            we ensure that no pet suffers due to cold weather.
-          </p>
+        
         </motion.div>
 
         <motion.div
@@ -132,26 +129,26 @@ const About = () => {
           <img
             src="https://i.pinimg.com/originals/9f/df/93/9fdf93860f9269c05411e27291a7b936.gif"
             alt="Mission GIF"
-            className="rounded-2xl w-[420px] shadow-xl"
+            className="rounded-2xl  shadow-xl"
           />
         </motion.div>
       </div>
 
       {/* OUR VISION */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-24">
+      <div className=" grid md:grid-cols-2 gap-12 items-center mb-24 max-w-screen-2xl mx-auto md:px-10 px-4 text-center sm:text-left">
         <motion.div
-          className="flex justify-center"
-          initial={{ x: 120, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-        >
-          <img
-            src="https://media3.giphy.com/media/jWvpexCxDDZToA17Mn/giphy.gif"
-            alt="Vision GIF"
-            className="rounded-2xl w-[420px] shadow-xl"
-          />
-        </motion.div>
+  className="flex justify-center"
+  initial={{ x: 120, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1 }}
+  viewport={{ once: true }}
+>
+  <img
+    src="https://media3.giphy.com/media/jWvpexCxDDZToA17Mn/giphy.gif"
+    alt="Vision GIF"
+    className="rounded-2xl shadow-xl w-full max-w-4xl h-auto sm:max-h-[300px] md:max-h-[600px] lg:max-h-[600px]"
+  />
+</motion.div>
 
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -159,50 +156,15 @@ const About = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold mb-2 flex items-center gap-2 "><span className="animate-bounce">💡</span> Our Vision</h3>
-          <p className="text-gray-700 mb-4">
-            Our vision is a world where every pet gets proper winter protection and warmth.
+          <h3 className="text-3xl font-bold mb-2  gap-2 "><span className="animate-ping">💡</span> Our Vision</h3>
+          <p className="text-gray-600 text-lg ">
+           Our vision is a world where every pet, regardless of breed or location, receives proper winter protection and warmth. We are committed to building a network of winter shelters, emergency rescue centers, and mobile winter care units across the nation, ensuring that help reaches every pet in need. Beyond immediate care, our long-term mission is to educate communities, raise awareness, and empower pet owners with the knowledge and resources to implement effective winter safety measures.
           </p>
-          <p className="text-gray-700 mb-2">
-            We aim to build winter shelters, emergency rescue centers,
-            and mobile winter care units nationwide.
-          </p>
-          <p className="text-gray-700">
-            Our long-term goal is to educate communities and empower pet owners
-            to take proper winter safety measures.
-          </p>
+         
         </motion.div>
       </div>
 
-      {/* OUR SERVICES */}
-      {/* <motion.div
-        className="max-w-6xl mx-auto mb-20"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Services</h3>
-
-        <div className="grid md:grid-cols-3 gap-10">
-          {[
-            { title: "Winter Health Check", desc: "Full body checkups, winter medicine & safety support.", icon: "🐶" },
-            { title: "Pet Adoption", desc: "Helping pets find warm & loving homes during winter.", icon: "🐾" },
-            { title: "Winter Survival Kits", desc: "Jackets, blankets, grooming essentials & nutrition packs.", icon: "🧣" },
-          ].map((service, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.06, rotateY: 5 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 backdrop-blur-lg bg-opacity-60 text-center"
-            >
-              <div className="text-5xl mb-4">{service.icon}</div>
-              <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
-              <p className="text-gray-600">{service.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div> */}
+     
       <ServiceSection></ServiceSection>
 
       {/* TRAINING DEPARTMENTS — NEW DESIGN */}
@@ -211,10 +173,10 @@ const About = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
-        className="text-center mt-28"
+        className=" mt-28 max-w-screen-2xl mx-auto md:px-10 px-4 text-center sm:text-left"
       >
         {/* Title + Animated Line */}
-        <div className="relative flex items-center justify-center mb-12">
+        <div className="relative flex items-center justify-center mb-12 ">
           <motion.div
             initial={{ width: 0, opacity: 0 }}
             whileInView={{ width: "120px", opacity: 1 }}

@@ -54,7 +54,7 @@ const Adopt = () => {
     toast.success(`🎉 You adopted ${pet.name}!`)
        }
   return (
-    <section className="bg-orange-50  rounded-t-full md:py-16 py-5 px-6 md:px-12 lg:px-20" data-aos="fade-up">
+    <section className="bg-orange-50 max-w-screen-2xl mx-auto  rounded-t-full md:py-16 py-5 px-6 md:px-12 lg:px-20 " data-aos="fade-up">
       
       <div className="max-w-6xl mx-auto text-center mb-20">
         <div className="flex justify-center items-center gap-2 mt-30 mb-10">

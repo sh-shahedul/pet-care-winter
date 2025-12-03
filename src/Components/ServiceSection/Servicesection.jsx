@@ -25,7 +25,7 @@ const ServiceSection = () => {
     },
    ];
   return (
-    <div className="text-center py-16 max-w-7xl mx-auto px-4  ">
+    <div className="text-center py-16 max-w-screen-2xl mx-auto md:px-10 px-4 bg-amber-50  rounded-full  ">
       <p className="text-orange-500 text-xl font-semibold mb-2 flex justify-center items-center"><MdOutlinePets />&nbsp; Our Services &nbsp;<MdOutlinePets/>   </p>
       <h2 className="md:text-4xl text-3xl font-bold mb-12 bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">Our one-stop solution for premium pet care</h2>
 

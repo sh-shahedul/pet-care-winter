@@ -13,9 +13,9 @@ const Home = () => {
     const  sliceData = data.slice(0, 9);
     console.log(sliceData)
     return (
-        <div>
+        <div className='mx-auto md:px-10 px-4'>
           
-            <section>
+            <section className=' max-w-screen-2xl mx-auto md:px-10 px-4 '>
                  <HeroSlider></HeroSlider>
 
                
@@ -24,7 +24,7 @@ const Home = () => {
             </section>
  
 
-   <main className="grid grid-cols-1 md:grid-cols-12 gap-5 px-2 sm:px-3 md:px-6 lg:px-8">
+   <main className="grid grid-cols-1 md:grid-cols-12 gap-5 px-4 sm:px-3 md:px-6 lg:px-8  max-w-screen-2xl mx-auto  ">
   
   <div className="md:col-span-12 lg:col-span-9 flex items-center justify-center order-1 md:order-1">
     <div className="w-full">

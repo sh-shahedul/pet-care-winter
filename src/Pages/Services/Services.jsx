@@ -38,11 +38,11 @@ const Services = () => {
     <div className="bg-base-200">
 
       {
-        loading ? (<Loading></Loading>):  <>    <div className="w-[97%] mx-auto pt-10">
+        loading ? (<Loading></Loading>):  <>    <div className="max-w-screen-2xl px-4 mx-auto pt-10">
 
         {/* centered title + description */}
         <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold text-orange-700">
+          <h1 className="text-3xl md:text-4xl font-bold text-orange-600">
             Our Services
           </h1>
 
@@ -76,7 +76,7 @@ const Services = () => {
       </div>
 
       {/* ---------- SERVICES GRID ---------- */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 py-10 w-[95%] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 py-10 max-w-screen-2xl px-4 mx-auto">
         {filteredServices.map((petcare) => (
           <Card key={petcare.serviceId} petcare={petcare} />
         ))}

@@ -21,7 +21,7 @@ const HomeLayOut = () => {
   AOS.init({ duration: 1000 });
    }, []);
     return (
-        <div className='flex flex-col min-h-screen max-w-screen-2xl mx-auto'>
+        <div className='flex flex-col min-h-screen '>
            <header >
             {/* className='' style={{ backgroundImage: `url(${bgimg})` }} */}
                <div >
