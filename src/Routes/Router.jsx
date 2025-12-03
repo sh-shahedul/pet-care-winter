@@ -14,6 +14,7 @@ import ForgotPassword from "../Components/ResetPassword/ForgotPassword";
 import NotFound from "../Components/Error/NotFound";
 import About from "../Pages/About/About";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import Blogs from "../Pages/Blogs/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
         {
             path:'contact',
             element:<ContactUs></ContactUs>
+        },
+        {
+            path:'blogs',
+            element:<Blogs></Blogs>
         },
         {
             path:'/service-details/:id',

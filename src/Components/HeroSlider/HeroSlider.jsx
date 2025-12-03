@@ -13,7 +13,7 @@
  import "swiper/css/pagination";
  const HeroSlider = () => {
     return (
-         <div style={{ backgroundImage: `url(${bgimg})` }} className='bg-cover bg-center bg-no-repeat h-auto sm:h-auto md:h-[550px] lg:h-[650px] flex md:flex-row flex-col justify-center items-start gap-10 md:px-10  ' >
+         <div style={{ backgroundImage: `url(${bgimg})` }} className='bg-cover bg-center bg-no-repeat h-auto sm:h-auto md:h-[550px] lg:h-[650px] flex md:flex-row flex-col justify-center items-start gap-10 w-full ' >
          <div className='flex-1 md:mt-20 mt-5 p-4'>  
           <h3 className='text-xl font-semibold text-orange-500 md:text-left text-center'>WELCOME TO PET FROSTY</h3>
           <h1 className='lg:text-5xl md:text-4xl md:text-left text-center text-3xl font-bold mt-5 '>The Best Care for Your Best Friend</h1>

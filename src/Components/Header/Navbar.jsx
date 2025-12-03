@@ -92,6 +92,7 @@ const Navbar = () => {
     <li className='font-bold text-base'><NavLink to='/service'>Services</NavLink></li>
     <li className='font-bold text-base'><NavLink to='/about'>About US</NavLink></li>
     <li className='font-bold text-base'><NavLink to='/contact'>Contact US</NavLink></li>
+    <li className='font-bold text-base'><NavLink to='/blogs'>Blogs</NavLink></li>
   </>;
 
   const handelLogOut = () => {
@@ -108,7 +109,7 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <div className="fixed top-0 left-0 w-full z-50  ">
-        <div className="navbar px-4 lg:px-8 max-w-screen-2xl mx-auto bg-white/80 rounded-full">
+        <div className="navbar px-4 lg:px-8 max-w-screen-2xl mx-auto bg-white/90 rounded-full">
           {/* Navbar Start */}
           <div className="navbar-start">
             <div className="dropdown">
@@ -151,14 +152,14 @@ const Navbar = () => {
             {user ? (
               <button
                 onClick={handelLogOut}
-                className="text-white font-bold md:px-8 px-4 py-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none"
+                className="text-white font-bold md:px-8 px-4 py-2 mr-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none "
               >
                 Sign Out
               </button>
             ) : (
               <Link
                 to='/login'
-                className="text-white font-bold md:px-8 px-4 py-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none"
+                className="text-white font-bold md:px-8 px-4 py-2 mr-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 transition-all duration-300 focus:outline-none"
               >
                 Sign In
               </Link>
