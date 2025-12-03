@@ -60,7 +60,7 @@ const LogIn = () => {
         setShow(!show)
       }
        return (
-        <div className='flex justify-center min-h-screen items-center bg-linear-to-br from-orange-100 via-orange-200 to-orange-50 '>
+        <div className='flex justify-center min-h-screen items-center  '>
              <div className="card bg-white/35 w-full max-w-sm shrink-0 shadow-2xl">
             <div className="card-body">
 

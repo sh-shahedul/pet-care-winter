@@ -15,6 +15,8 @@ import NotFound from "../Components/Error/NotFound";
 import About from "../Pages/About/About";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import Blogs from "../Pages/Blogs/Blogs";
+import Privacy from "../Pages/Privacy/Privacy";
+import Terms from "../Pages/Terms/Terms";
 
 export const router = createBrowserRouter([
   {
@@ -75,6 +77,14 @@ export const router = createBrowserRouter([
         {
            path:'forgotpass',
            element:<ForgotPassword></ForgotPassword>
+        },
+        {
+           path:'privacy',
+           element:<Privacy></Privacy>
+        },
+        {
+           path:'terms',
+           element:<Terms></Terms>
         }
     ]
   },

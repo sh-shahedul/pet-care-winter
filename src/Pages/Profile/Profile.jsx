@@ -36,7 +36,7 @@ import { MdVerifiedUser } from "react-icons/md";
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-linear-to-br from-orange-100 via-orange-200 to-orange-50 p-6">
+    <div className="min-h-screen flex justify-center items-center p-6">
       <div className="max-w-5xl w-full bg-white/25 rounded-2xl shadow-xl p-8 flex flex-col md:flex-row gap-10">
         
         {/*  Left Side  */}

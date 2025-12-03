@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import toast from 'react-hot-toast';
 
 const Footer = () => {
+  const handelSUbscribe=()=>{
+    toast.success(' Thanks for subscribe Our Channel')
+
+  }
   return (
     <div className="bg-black text-white">
       <footer className="max-w-screen-2xl mx-auto px-6 md:px-10 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
@@ -23,23 +28,22 @@ const Footer = () => {
         <div className="flex-1 flex flex-col md:flex-row justify-between gap-10 md:gap-20">
           
           {/* Information Links */}
-          <div className="flex flex-col gap-3 md:ml-50">
+          <div className="flex flex-col md:ml-30">
             <h6 className="font-semibold text-lg">Information</h6>
             <Link to="/about" className="text-gray-400 hover:text-orange-500 transition">About Us</Link>
             <Link to="/contact" className="text-gray-400 hover:text-orange-500 transition">Contact Us</Link>
-            <Link to="/help" className="text-gray-400 hover:text-orange-500 transition">Help & Support</Link>
+              <h6 className="font-semibold text-lg mt-5">Our Policy</h6>
+              <ul className=" text-gray-400 text-sm space-y-1">
+                <li><Link to="/terms" className="hover:text-orange-500 transition">Terms & Conditions</Link></li>
+                <li><Link to="/privacy" className="hover:text-orange-500 transition">Privacy Policy</Link></li>
+              </ul>
+
+
           </div>
 
           {/* Policy Links + Social */}
           <div className="flex flex-col gap-6">
-            <div>
-              <h6 className="font-semibold text-lg">Our Policy</h6>
-              <ul className="mt-2 text-gray-400 text-sm space-y-1">
-                <li><Link to="/terms" className="hover:text-orange-500 transition">Terms & Conditions</Link></li>
-                <li><Link to="/privacy" className="hover:text-orange-500 transition">Privacy Policy</Link></li>
-                <li><Link to="/returns" className="hover:text-orange-500 transition">Return & Refund Policy</Link></li>
-              </ul>
-            </div>
+          
 
             <div>
               <h6 className="font-semibold text-lg">Social Links</h6>
@@ -54,6 +58,10 @@ const Footer = () => {
                   <FaTwitter size={20} className="hover:text-orange-500 transition"/>
                 </a>
               </div>
+              <div className="join mt-10">
+                 <input className="input join-item text-black font-bold " placeholder="Email" type='email' required />
+                 <button onClick={handelSUbscribe} className="btn join-item rounded-r-full bg-black border-3 text-white border-white">Subscribe</button>
+             </div>
             </div>
           </div>
         </div>

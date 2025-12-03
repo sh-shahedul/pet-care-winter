@@ -7,6 +7,7 @@ import ExpertVets from '../../Components/ExpertVets/ExpertVets ';
 import Adopt from '../../Components/Adopt/Adopt';
 import ServiceTitle from '../../Components/ServiceTitle/ServiceTitle';
 import DogScrollAnimation from '../../Components/Animation/DogScrollAnimation';
+import MegaDeal from '../../Components/MegaDeals/MegaDeal';
     
 const Home = () => {
     const data= useLoaderData()
@@ -52,6 +53,7 @@ const Home = () => {
 
 
         <ExpertVets></ExpertVets>
+        <MegaDeal></MegaDeal>
          <Adopt></Adopt>
            
         </div>
