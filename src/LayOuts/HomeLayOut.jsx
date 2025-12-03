@@ -23,7 +23,8 @@ const HomeLayOut = () => {
     return (
         <div className='flex flex-col min-h-screen max-w-screen-2xl mx-auto'>
            <header >
-               <div style={{ backgroundImage: `url(${bgimg})` }}>
+            {/* className='' style={{ backgroundImage: `url(${bgimg})` }} */}
+               <div >
                 <Navbar></Navbar>
                </div>
               

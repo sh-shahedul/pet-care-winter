@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FaPaw } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast"; 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -48,11 +49,13 @@ const Adopt = () => {
     },
   ];
 
+ 
+  const handleAdopt = (pet) => {
+    toast.success(`🎉 You adopted ${pet.name}!`)
+       }
   return (
-    <section
-      className="bg-orange-50  rounded-t-full md:py-16 py-5 px-6 md:px-12 lg:px-20"
-      data-aos="fade-up"
-    >
+    <section className="bg-orange-50  rounded-t-full md:py-16 py-5 px-6 md:px-12 lg:px-20" data-aos="fade-up">
+      
       <div className="max-w-6xl mx-auto text-center mb-20">
         <div className="flex justify-center items-center gap-2 mt-30 mb-10">
           <FaPaw className="text-orange-500 text-3xl animate-bounce" />
@@ -60,60 +63,58 @@ const Adopt = () => {
            <FaPaw className="text-orange-500 text-3xl animate-bounce" />
         </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Every pet deserves a warm home and a loving heart. Meet our adorable
-          pets waiting to be adopted — give them the cozy winter they deserve. ❄️
+          Every pet deserves a warm home and a loving heart. Meet our adorable pets waiting to be adopted — give them the cozy winter they deserve. ❄️
         </p>
       </div>
 
-      <div className="">
+      <div>
         <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={30}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        autoplay={{
-          delay: 2500, 
-          disableOnInteraction: false, 
-        }}
-        loop={true} // 
-        speed={1000} // 
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        className="max-w-6xl mx-auto "
-      >
-        {pets.map((pet) => (
-          <SwiperSlide key={pet.id}>
-            <div className="card  bg-white shadow-xl rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
-              <figure className="overflow-hidden">
-                <img
-                  src={pet.image}
-                  alt={pet.name}
-                  className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </figure>
-              <div className="card-body text-center">
-                <h3 className="text-xl font-semibold text-orange-500">
-                  {pet.name}
-                </h3>
-                <p className="text-gray-600">{pet.breed}</p>
-                <p className="text-sm text-gray-400">{pet.age}</p>
-                <div className="card-actions justify-center mt-4">
-                  <button className="btn bg-orange-500 hover:bg-orange-600 text-white px-6 rounded-full">
-                    Adopt Now
-                  </button>
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          loop={true}
+          speed={1000}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="max-w-6xl mx-auto "
+        >
+          {pets.map((pet) => (
+            <SwiperSlide key={pet.id}>
+              <div className="card bg-white shadow-xl rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                <figure className="overflow-hidden">
+                  <img
+                    src={pet.image}
+                    alt={pet.name}
+                    className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </figure>
+                <div className="card-body text-center">
+                  <h3 className="text-xl font-semibold text-orange-500">{pet.name}</h3>
+                  <p className="text-gray-600">{pet.breed}</p>
+                  <p className="text-sm text-gray-400">{pet.age}</p>
+                  <div className="card-actions justify-center mt-4">
+                    <button
+                      onClick={() => handleAdopt(pet)}
+                      className="btn bg-orange-500 hover:bg-orange-600 text-white px-6 rounded-full"
+                    >
+                      Adopt Now
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
 };
 
 export default Adopt;
+

@@ -12,6 +12,8 @@ import Loading from "../Components/Loading/Loading";
 import Error from "../Components/Error/Error";
 import ForgotPassword from "../Components/ResetPassword/ForgotPassword";
 import NotFound from "../Components/Error/NotFound";
+import About from "../Pages/About/About";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 export const router = createBrowserRouter([
   {
@@ -32,11 +34,21 @@ export const router = createBrowserRouter([
         },
         {
             path:'service',
-            element:<Services></Services>
+            element:<Services></Services>,
+            loader:()=>fetch('/serviceData.json')
 
-        },{
+        },
+        {
+            path:'about',
+            element:<About></About>
+        },
+        {
+            path:'contact',
+            element:<ContactUs></ContactUs>
+        },
+        {
             path:'/service-details/:id',
-            element:<PrivateRouter><ServiceDetails></ServiceDetails></PrivateRouter>,
+            element:<ServiceDetails></ServiceDetails>,
             errorElement:<NotFound></NotFound>,
             loader:()=>fetch('/serviceData.json')
         },

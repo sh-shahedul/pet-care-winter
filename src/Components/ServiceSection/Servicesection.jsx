@@ -41,9 +41,7 @@ const ServiceSection = () => {
         ))}
       </div>
 
-      <Link to='/' className="text-white mt-8 flex items-center justify-center w-[200px] mx-auto font-bold px-4 py-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
-        <FaArrowLeft /> &nbsp;  Back To Home
-      </Link>
+      
       
     </div>
   );
