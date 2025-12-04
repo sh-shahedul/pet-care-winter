@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 
 const ContactUs = () => {
+
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     toast.success("🎉 Your message has been sent!");
@@ -14,7 +20,6 @@ const ContactUs = () => {
     <section className="bg-gray-100 py-16">
       <Toaster position="top-right" reverseOrder={false} />
 
-      {/* Container for all sections */}
       <div className="max-w-screen-2xl mx-auto px-4 flex flex-col gap-16">
 
         {/* HEADER */}
@@ -56,12 +61,14 @@ const ContactUs = () => {
               required
             />
           </div>
+
           <textarea
             placeholder="Your Message"
             rows={5}
             className="border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-orange-400 w-full"
             required
           ></textarea>
+
           <button
             type="submit"
             className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300"
@@ -83,11 +90,13 @@ const ContactUs = () => {
             <p className="text-gray-700 font-semibold">+880 123 456 789</p>
             <p className="text-gray-500 text-sm">Emergency Hotline</p>
           </div>
+
           <div className="flex flex-col items-center gap-2">
             <FaEnvelope className="text-orange-500 text-2xl" />
             <p className="text-gray-700 font-semibold">info@petwintercare.com</p>
             <p className="text-gray-500 text-sm">24/7 Support Email</p>
           </div>
+
           <div className="flex flex-col items-center gap-2">
             <FaMapMarkerAlt className="text-orange-500 text-2xl" />
             <p className="text-gray-700 font-semibold">Dhaka, Bangladesh</p>
@@ -103,14 +112,16 @@ const ContactUs = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold text-orange-600 mb-2">⚠ Quick Pet Winter Help</h3>
+          <h3 className="text-2xl font-bold text-orange-600 mb-2">
+            ⚠ Quick Pet Winter Help
+          </h3>
           <p className="text-gray-700 max-w-3xl mx-auto">
-            If you find a pet suffering from cold, please contact our emergency hotline immediately. 
+            If you find a pet suffering from cold, please contact our emergency hotline immediately.
             Keep them warm and safe while we provide medical assistance.
           </p>
         </motion.div>
 
-        {/* LOCATION MAP */}
+        {/* MAP */}
         <motion.div
           className="rounded-2xl overflow-hidden shadow-xl"
           initial={{ opacity: 0, y: 30 }}
@@ -124,8 +135,8 @@ const ContactUs = () => {
             width="100%"
             height="300"
             className="border-0 w-full"
-            allowFullScreen=""
             loading="lazy"
+            allowFullScreen
           ></iframe>
         </motion.div>
 

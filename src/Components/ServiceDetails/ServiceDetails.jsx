@@ -1,7 +1,7 @@
 import React from "react";
 import { useLoaderData, useParams, useNavigate } from "react-router";
-import toast, { Toaster } from "react-hot-toast";
 import NotFound from "../Error/NotFound";
+import toast from "react-hot-toast";
 
 const ServiceDetails = () => {
   const { id } = useParams();

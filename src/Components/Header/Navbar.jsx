@@ -90,9 +90,9 @@ const Navbar = () => {
   const links = <>
     <li className='font-bold text-base'><NavLink to='/'>Home</NavLink></li>
     <li className='font-bold text-base'><NavLink to='/service'>Services</NavLink></li>
-    <li className='font-bold text-base'><NavLink to='/about'>About US</NavLink></li>
-    <li className='font-bold text-base'><NavLink to='/contact'>Contact US</NavLink></li>
     <li className='font-bold text-base'><NavLink to='/blogs'>Blogs</NavLink></li>
+    <li className='font-bold text-base'><NavLink to='/about'>About Us</NavLink></li>
+    <li className='font-bold text-base'><NavLink to='/contact'>Contact Us</NavLink></li>
   </>;
 
   const handelLogOut = () => {

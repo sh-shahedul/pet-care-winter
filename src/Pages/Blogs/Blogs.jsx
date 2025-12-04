@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import { FiSearch, FiArrowRight, FiUser, FiCalendar } from 'react-icons/fi';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-
-// Pet Article Images
 import groomingBlog from "../../assets/groming_Blog.jpg"
 import winterCareBlog from "../../assets/winterBlogs.jpg";
 import trainingBlog from "../../assets/Trainingblogs.jpg";
@@ -107,9 +105,9 @@ const FancyPetBlogs = () => {
 
                 <hr className="border-orange-200" />
 
-                {/* Featured Article & Sidebar */}
+                
                 <div className="grid lg:grid-cols-3 gap-12">
-                    {/* Featured Article */}
+                    
                     {featuredArticle && (
                         <motion.div
                             data-aos="fade-right"
