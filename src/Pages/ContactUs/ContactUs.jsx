@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+
 
 const ContactUs = () => {
 
@@ -18,9 +19,9 @@ const ContactUs = () => {
 
   return (
     <section className="bg-gray-100 py-16">
-      <Toaster position="top-right" reverseOrder={false} />
+      
 
-      <div className="max-w-screen-2xl mx-auto px-4 flex flex-col gap-16">
+      <div className="max-w-screen-2xl mx-auto md:px-10 px-5 flex flex-col gap-16">
 
         {/* HEADER */}
         <motion.div
