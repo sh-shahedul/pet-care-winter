@@ -10,54 +10,62 @@ import DogScrollAnimation from '../../Components/Animation/DogScrollAnimation';
 import MegaDeal from '../../Components/MegaDeals/MegaDeal';
     
 const Home = () => {
-    const data= useLoaderData()
-    const  sliceData = data.slice(0, 9);
-    console.log(sliceData)
-    return (
-        <div className='mx-auto md:px-10 px-4'>
-          
-            <section className=' max-w-screen-2xl mx-auto md:px-10 px-4 '>
-                 <HeroSlider></HeroSlider>
+  const data = useLoaderData();
+  const sliceData = data.slice(0, 9);
 
-               
-                  <ServiceTitle></ServiceTitle> 
-                 <DogScrollAnimation></DogScrollAnimation>  
-            </section>
- 
+  return (
+    <div className="mx-auto px-2 sm:px-4 md:px-8 lg:px-10">
 
-   <main className="grid grid-cols-1 md:grid-cols-12 gap-5 px-4 sm:px-3 md:px-6 lg:px-8  max-w-screen-2xl mx-auto  ">
-  
-  <div className="md:col-span-12 lg:col-span-9 flex items-center justify-center order-1 md:order-1">
-    <div className="w-full">
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 w-full px-1">
-        {sliceData.map((petcare) => (
-          <Cards key={petcare.serviceId} petcare={petcare} />
-        ))}
-      </div>
+      {/* HERO SECTION */}
+      <section className="max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-10">
+        <HeroSlider />
+        <ServiceTitle />
+        <DogScrollAnimation />
+      </section>
 
-      <Link to='service' className="flex justify-center mt-5 text-white font-bold px-4 py-2 rounded-2xl bg-linear-to-l from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
-        Explore more →
-      </Link>
+      {/* MAIN CONTENT AREA */}
+      <main className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-5 md:gap-6 max-w-screen-2xl mx-auto mt-4 sm:mt-6 px-1 sm:px-2 md:px-10">
 
-    </div>
-  </div>
+        {/* Cards Section */}
+        <div className="md:col-span-12 lg:col-span-9 order-1">
+          <div className="w-full">
 
-  <aside className="md:col-span-12 lg:col-span-3 order-2 md:order-2 ">
-    <div className="lg:sticky lg:top-20">
-      <WinterTips />
-    </div>
-  </aside>
+            {/* Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5">
+              {sliceData.map((petcare) => (
+                <Cards key={petcare.serviceId} petcare={petcare} />
+              ))}
+            </div>
 
-</main>
+            {/* Explore Button */}
+            <Link
+              to="service"
+              className="flex justify-center mt-6 text-white font-bold px-4 py-2 rounded-2xl bg-linear-to-r from-orange-400 to-orange-600 hover:scale-105 hover:shadow-lg transition-all duration-300"
+            >
+              Explore more →
+            </Link>
 
-
-        <ExpertVets></ExpertVets>
-        <MegaDeal></MegaDeal>
-         <Adopt></Adopt>
-           
+          </div>
         </div>
-    );
+
+        {/* Sidebar */}
+        <aside className="md:col-span-12 lg:col-span-3 order-2">
+          <div className="lg:sticky lg:top-20">
+            <WinterTips />
+          </div>
+        </aside>
+
+      </main>
+
+      {/* OTHER SECTIONS */}
+     <div className="max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-10">
+        <ExpertVets />
+        <MegaDeal />
+        <Adopt />
+     </div>
+
+    </div>
+  );
 };
 
 export default Home;
